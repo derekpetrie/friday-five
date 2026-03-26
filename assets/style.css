@@ -125,6 +125,28 @@ body {
   color: var(--text-body);
   line-height: 1.7;
   margin: 0;
+  padding-left: 18px;
+  list-style: none;
+}
+
+.bullet-analysis li {
+  position: relative;
+  padding-left: 12px;
+  margin-bottom: 4px;
+}
+
+.bullet-analysis li::before {
+  content: '\2022';
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.bullet-analysis li:last-child {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 .bullet-source {
