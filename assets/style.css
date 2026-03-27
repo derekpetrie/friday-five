@@ -211,5 +211,14 @@ body {
   .bullet-number {
     font-size: 24px;
     width: 28px;
+    padding-right: 8px;
+  }
+
+  .bullet-headline {
+    font-size: 15px;
+  }
+
+  .bullet-inner {
+    gap: 10px;
   }
 }
