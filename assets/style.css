@@ -115,9 +115,20 @@ body {
 .bullet-headline {
   font-size: 16px;
   font-weight: 700;
-  color: var(--text-primary);
   font-family: var(--serif);
   margin-bottom: 8px;
+}
+
+.bullet-headline a {
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.15s;
+}
+
+.bullet-headline a:hover {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
 }
 
 .bullet-analysis {
