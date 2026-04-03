@@ -41,7 +41,7 @@ upload_file() {
   local sha
   sha=$(curl -s -H "Authorization: token $PAT" \
     "https://api.github.com/repos/$REPO/contents/$repo_path" \
-    | grep -o '"sha":"[^"]*"' | head -1 | cut -d'"' -f4 || echo "")
+    | python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null || echo "")
 
   local payload
   if [ -n "$sha" ]; then
